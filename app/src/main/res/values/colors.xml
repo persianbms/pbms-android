@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/pbms_grey</color>
+    <color name="colorPrimaryDark">@color/pbms_black</color>
+    <color name="colorAccent">@color/pbms_blue</color>
+
+
+    <color name="pbms_black">#212121</color>
+    <color name="pbms_grey">#373737</color>
+    <color name="pbms_blue">#6bd1ff</color>
+</resources>
