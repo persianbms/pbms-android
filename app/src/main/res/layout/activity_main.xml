@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent" >
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/pbms_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <fragment
             android:id="@+id/live_stream_fragment"
             android:name="org.persianbms.andromeda.LiveStreamFragment"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-        <fragment
-            android:id="@+id/home_fragment"
-            android:name="org.persianbms.andromeda.HomeFragment"
-            app:layout_constraintTop_toBottomOf="@id/live_stream_fragment"
-            app:layout_constraintBottom_toTopOf="@id/bottom_bar"
-            android:layout_width="match_parent"
-            android:layout_height="0dp" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_bar"
-            app:menu="@menu/bottom_navigation"
-            app:backgroundTint="@color/pbms_black"
-            app:itemIconTint="@color/bottom_bar_icon"
-            app:itemTextColor="@color/bottom_bar_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+    </androidx.appcompat.widget.Toolbar>
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="org.persianbms.andromeda.HomeFragment"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

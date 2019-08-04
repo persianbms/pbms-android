@@ -11,10 +11,10 @@
         <WebView
             android:id="@+id/webView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/toolbar_background"
-            android:scrollbarStyle="insideOverlay"
+            app:layout_constraintBottom_toTopOf="@+id/toolbar_background"
             android:layout_width="match_parent"
             android:layout_height="0dp" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/progress_indicator_guide"
@@ -35,11 +35,60 @@
 
         <View
             android:id="@+id/toolbar_background"
-            android:background="@color/pbms_black"
+            android:background="@color/pbms_grey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="match_parent"
             android:layout_height="48dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navigate_home"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:icon="@drawable/ic_outline_home_36dp"
+            app:iconTint="@color/nav_bar_icon_tint"
+            app:iconGravity="start"
+            app:rippleColor="@android:color/white"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbar_background"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_background"
+            android:layout_width="52dp"
+            android:layout_height="0dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navigate_back"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:icon="@drawable/ic_sharp_arrow_back_36dp"
+            app:iconTint="@color/nav_bar_icon_tint"
+            app:rippleColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="@id/toolbar_background"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_background"
+            app:layout_constraintRight_toLeftOf="@+id/navigate_forward"
+            android:layout_width="52dp"
+            android:layout_height="0dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navigate_forward"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:icon="@drawable/ic_sharp_arrow_forward_36dp"
+            app:iconTint="@color/nav_bar_icon_tint"
+            app:rippleColor="@android:color/white"
+            android:layout_marginRight="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_background"
+            app:layout_constraintTop_toTopOf="@id/toolbar_background"
+            app:layout_constraintRight_toLeftOf="@+id/reload_page"
+            android:layout_width="52dp"
+            android:layout_height="0dp"
+            tools:ignore="RtlHardcoded" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reload_page"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:icon="@drawable/ic_sharp_refresh_36dp"
+            app:iconTint="@color/nav_bar_icon_tint"
+            app:rippleColor="@android:color/white"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_background"
+            app:layout_constraintTop_toTopOf="@id/toolbar_background"
+            android:layout_width="52dp"
+            android:layout_height="0dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

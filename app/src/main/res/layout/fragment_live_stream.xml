@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<com.google.android.material.button.MaterialButton
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/pbms_grey"
-    tools:context=".MainActivity">
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/toggle_playback"
-        app:icon="@drawable/ic_sharp_play_circle_filled_48dp"
-        app:iconTint="@android:color/white"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Live stream"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <com.google.android.material.button.MaterialButton
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        app:icon="@drawable/ic_outline_info_24px"
-        app:iconTint="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:id="@+id/toggle_playback"
+    app:icon="@drawable/ic_sharp_play_circle_filled_48dp"
+    app:iconTint="@android:color/white"
+    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+    android:gravity="start|center_vertical"
+    android:text="@string/live_stream"
+    android:textColor="@android:color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
