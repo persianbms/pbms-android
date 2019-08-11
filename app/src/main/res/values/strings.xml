@@ -1,9 +1,33 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">PersianBMS</string>
     <string name="home">Home</string>
     <string name="about">About</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="live_stream">Live stream</string>
+    <string name="about_us">About us</string>
+    <string name="contact_us">Contact us</string>
+    <string name="satellite_broadcast_information">Satellite broadcast information</string>
+    <string name="telegram">Telegram</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="youtube">YouTube</string>
+    <string name="soundcloud">SoundCloud</string>
+    <string name="twitter">Twitter</string>
+    <string name="follow_us">Follow us</string>
+    <string name="message_us">Message us</string>
+    <string name="via_the_web">Via the web</string>
+    <string name="email_us">Email us</string>
+    <string name="call_us">Call us</string>
+    <string name="pbms_phone_number_msg">+1–703–671–8888</string>
+    <string name="persianbms">PersianBMS</string>
+    <string name="radio_broadcast_24_hours_msg">Radio broadcast (24 hours)</string>
+    <string name="iran_and_europe">Iran and Europe</string>
+    <string name="iran_and_europe_satellite_info_msg">Satellite: Hotbird 13D – 13° east\nD/L frequency: 11,200 MHz\nD/L polarity: Vertical\nTransponder: 134\nSymbol rate: 27,500\nFEC: 5/6</string>
+    <string name="north_america">North America</string>
+    <string name="north_america_satellite_info_msg" tools:ignore="TypographyFractions">Satellite Galaxy 19 – 97° west\nD/L frequency: 12,152 MHz\nD/L polarity: Horizontal\nTransponder: 26\nSymbol rate: 20,000\nFEC: 3/4</string>
+    <string name="tv_schedule">TV schedule</string>
+    <string name="noveen_tv">Noveen TV</string>
+    <string name="noveen_tv_schedule_msg">On Andisheh TV\nThu 21:30 Tehran Time\nFri 12:30 Tehran Time\n\nOn ParsTV\nMon 18:30 Tehran Time\nWed 16:30 Tehran Time</string>
+    <string name="ain_bahai_tv">Ain Bahá\'í TV</string>
+    <string name="ain_bahai_tv_schedule_msg">On Andisheh TV\nTue 22:30 Tehran Time\nWed 12:30 Tehran Time\n\nOn ParsTV\nSat 16:30 Tehran Time\nSun 18:30 Tehran Time</string>
 </resources>

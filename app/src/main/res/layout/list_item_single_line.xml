@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="56dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="0dp"
+    android:background="@drawable/list_item_background"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".AboutFragment">
+    <ImageView
+        android:id="@+id/image"
+        android:contentDescription="@null"
+        tools:src="@drawable/ic_youtube"
+        android:tint="@color/pbms_blue"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/primary"
+        tools:text="Single-line item"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/divider"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/primary"
+        android:layout_width="0dp"
+        android:layout_height="1px" />
+</androidx.constraintlayout.widget.ConstraintLayout>

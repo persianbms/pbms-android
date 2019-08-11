@@ -39,7 +39,8 @@ public class HomeFragment extends Fragment implements MainActivity.BackPressInte
         super.onAttach(context);
 
         if (context instanceof MainActivity) {
-            ((MainActivity) context).setBackPressInterceptor(this);
+            MainActivity activity = (MainActivity)context;
+            activity.setBackPressInterceptor(this);
         }
     }
 
@@ -65,8 +66,10 @@ public class HomeFragment extends Fragment implements MainActivity.BackPressInte
         binding.reloadPage.setOnClickListener(view -> onReloadPage());
         binding.navigateHome.setOnClickListener(view -> onNavigateHome());
 
-        if (savedInstanceState != null) {
-            binding.webView.restoreState(savedInstanceState);
+        MainActivity activity = (MainActivity) requireActivity();
+        if (activity.getWebBundle() != null) {
+            binding.webView.restoreState(activity.getWebBundle());
+            updateNavButtons();
         } else {
             binding.webView.loadUrl(Constants.SITE_URL);
         }
@@ -82,30 +85,38 @@ public class HomeFragment extends Fragment implements MainActivity.BackPressInte
     }
 
     @Override
-    public void onPause() {
-        if (binding != null) {
-            binding.webView.onPause();
-        }
-
-        super.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
+    public void onStart() {
+        super.onStart();
 
         if (binding != null) {
             binding.webView.onResume();
         }
+
+        MainActivity activity = (MainActivity) requireActivity();
+        activity.setFragmentMenu(R.menu.main);
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        if (binding != null) {
-            binding.webView.saveState(outState);
-        }
+    public void onStop() {
+        super.onStop();
 
-        super.onSaveInstanceState(outState);
+        if (binding != null) {
+            binding.webView.onPause();
+            MainActivity activity = (MainActivity) getActivity();
+            if (activity != null) {
+                Bundle webState = new Bundle();
+                binding.webView.saveState(webState);
+                activity.setWebBundle(webState);
+            }
+        }
+    }
+
+    private void updateNavButtons() {
+        if (binding != null) {
+            binding.pageProgressIndicator.setVisibility(View.VISIBLE);
+            binding.navigateBack.setEnabled(binding.webView.canGoBack());
+            binding.navigateForward.setEnabled(binding.webView.canGoForward());
+        }
     }
 
     //region navigation clicks
@@ -179,10 +190,9 @@ public class HomeFragment extends Fragment implements MainActivity.BackPressInte
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
 
+            updateNavButtons();
             if (binding != null) {
                 binding.pageProgressIndicator.setVisibility(View.VISIBLE);
-                binding.navigateBack.setEnabled(binding.webView.canGoBack());
-                binding.navigateForward.setEnabled(binding.webView.canGoForward());
             }
         }
 
@@ -190,10 +200,9 @@ public class HomeFragment extends Fragment implements MainActivity.BackPressInte
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
 
+            updateNavButtons();
             if (binding != null) {
                 binding.pageProgressIndicator.setVisibility(View.INVISIBLE);
-                binding.navigateBack.setEnabled(binding.webView.canGoBack());
-                binding.navigateForward.setEnabled(binding.webView.canGoForward());
             }
         }
 

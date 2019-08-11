@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 @SuppressWarnings("unused")
 public class L {
 
-    private static final String TAG = "andromeda";
+    private static final String TAG = "pbms";
 
     public static void i(@NonNull String msg) {
         Log.i(TAG, msg);

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="72dp"
+    android:paddingTop="0dp"
+    android:paddingStart="16dp"
+    android:paddingBottom="0dp"
+    android:paddingEnd="0dp"
+    android:background="@drawable/list_item_background"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".AboutFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:contentDescription="@null"
+        android:tint="@color/pbms_blue"
+        tools:src="@drawable/ic_youtube"
+        android:scaleType="center"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Two-line item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/primary"
+        tools:text="Secondary text" />
+    <View
+        android:id="@+id/divider"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/primary"
+        android:layout_width="0dp"
+        android:layout_height="1px" />
+</androidx.constraintlayout.widget.ConstraintLayout>

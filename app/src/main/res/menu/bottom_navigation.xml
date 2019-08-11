@@ -7,5 +7,5 @@
     <item
         android:id="@+id/about"
         android:title="@string/about"
-        android:icon="@drawable/ic_outline_info_24px" />
+        android:icon="@drawable/ic_outline_info_24dp" />
 </menu>

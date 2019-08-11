@@ -1,0 +1,14 @@
+package org.persianbms.andromeda
+
+import android.view.View
+import android.widget.ImageView
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.textview.MaterialTextView
+
+class SingleLineItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    val image: ImageView = itemView.findViewById(R.id.image)
+    val primary: MaterialTextView = itemView.findViewById(R.id.primary)
+    val divider: View = itemView.findViewById(R.id.divider)
+
+}

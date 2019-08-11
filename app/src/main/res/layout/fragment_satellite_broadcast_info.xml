@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="16dp"
+    android:background="@color/pbms_grey"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/radio_broadcast_section_title"
+        android:text="@string/radio_broadcast_24_hours_msg"
+        android:textColor="@color/pbms_blue"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/iran_and_europe_label"
+        android:text="@string/iran_and_europe"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_broadcast_section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/iran_and_europe_info"
+        android:text="@string/iran_and_europe_satellite_info_msg"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/iran_and_europe_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/north_america_label"
+        android:text="@string/north_america"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/iran_and_europe_info"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/north_america_info"
+        android:text="@string/north_america_satellite_info_msg"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/north_america_label"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_schedule_section_title"
+        android:text="@string/tv_schedule"
+        android:textSize="20sp"
+        android:textColor="@color/pbms_blue"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/north_america_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/noveen_tv_label"
+        android:text="@string/noveen_tv"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_schedule_section_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/noveen_tv_schedule"
+        android:text="@string/noveen_tv_schedule_msg"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/noveen_tv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ain_tv_label"
+        android:text="@string/ain_bahai_tv"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/noveen_tv_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ain_tv_schedule"
+        android:textColor="@android:color/white"
+        android:text="@string/ain_bahai_tv_schedule_msg"
+        app:layout_constraintTop_toBottomOf="@id/ain_tv_label"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
