@@ -57,7 +57,7 @@ class ContactUsFragment : Fragment() {
             }
             CALL_US_ROW_ID -> {
                 val intent = Intent(Intent.ACTION_DIAL).apply {
-                    val phoneNumber = getString(R.string.pbms_phone_number_msg)
+                    val phoneNumber = "+17036718888"
                     data = Uri.parse("tel:$phoneNumber")
                 }
                 if (intent.resolveActivity(ctx.packageManager) != null) {
