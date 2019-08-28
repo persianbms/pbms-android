@@ -1,5 +1,7 @@
 package org.persianbms.andromeda
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.annotation.MenuRes
@@ -9,12 +11,17 @@ import androidx.appcompat.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        fun newIntent(ctx: Context): Intent {
+            return Intent(ctx, MainActivity::class.java)
+        }
+    }
+
     var backPressInterceptor: BackPressInterceptor? = null
 
     var webBundle: Bundle? = null
 
     fun setFragmentMenu(@MenuRes menuId: Int) {
-        L.i("inflating fragment menu")
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         toolbar.menu.clear()
         toolbar.inflateMenu(menuId)

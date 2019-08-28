@@ -13,7 +13,7 @@ android {
         applicationId "org.persianbms.andromeda"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 22
+        versionCode 23
         versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -41,6 +41,10 @@ dependencies {
     // exoplayer
     implementation 'com.google.android.exoplayer:exoplayer-core:2.10.3'
     implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.3'
+
+    // jetpack libs
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

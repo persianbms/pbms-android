@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toggle_playback"
-    app:icon="@drawable/ic_sharp_play_circle_filled_48dp"
+    app:icon="@drawable/live_stream_button"
     app:iconTint="@android:color/white"
     style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
     android:gravity="start|center_vertical"

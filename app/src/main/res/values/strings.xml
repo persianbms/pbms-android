@@ -30,4 +30,6 @@
     <string name="noveen_tv_schedule_msg">On Andisheh TV\nThu 21:30 Tehran Time\nFri 12:30 Tehran Time\n\nOn ParsTV\nMon 18:30 Tehran Time\nWed 16:30 Tehran Time</string>
     <string name="ain_bahai_tv">Ain Bahá\'í TV</string>
     <string name="ain_bahai_tv_schedule_msg">On Andisheh TV\nTue 22:30 Tehran Time\nWed 12:30 Tehran Time\n\nOn ParsTV\nSat 16:30 Tehran Time\nSun 18:30 Tehran Time</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
 </resources>
