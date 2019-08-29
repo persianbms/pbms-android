@@ -66,9 +66,9 @@ class ContactUsFragment : Fragment() {
             }
             TELEGRAM_ROW_ID -> {
                 try {
-                    Uri.parse("tg://resolve?domain=Persianbms").startViewIntent(ctx)
+                    Uri.parse("tg://resolve?domain=PersianBMSContact").startViewIntent(ctx)
                 } catch (ignore: Throwable) {
-                    Uri.parse("https://t.me/Persianbms").startViewIntent(ctx)
+                    Uri.parse("https://t.me/PersianBMSContact").startViewIntent(ctx)
                 }
             }
         }
