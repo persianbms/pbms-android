@@ -43,7 +43,6 @@ class HomeFragment : Fragment(), MainActivity.BackPressInterceptor {
         settings.javaScriptEnabled = true
         settings.databaseEnabled = true
         settings.domStorageEnabled = true
-        settings.saveFormData = false
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             settings.safeBrowsingEnabled = false
         }
@@ -58,8 +57,9 @@ class HomeFragment : Fragment(), MainActivity.BackPressInterceptor {
         binding.navigateHome.setOnClickListener { onNavigateHome() }
 
         val activity = requireActivity() as MainActivity
-        if (activity.webBundle != null) {
-            binding.webView.restoreState(activity.webBundle)
+        val webBundle = activity.webBundle
+        if (webBundle != null) {
+            binding.webView.restoreState(webBundle)
             updateNavButtons()
         } else {
             binding.webView.loadUrl(Constants.SITE_URL)

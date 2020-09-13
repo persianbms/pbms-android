@@ -1,35 +1,35 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">PersianBMS</string>
-    <string name="home">Home</string>
-    <string name="about">About</string>
+    <string name="home">خانه</string>
+    <string name="about">درباره</string>
 
-    <string name="live_stream">Live stream</string>
-    <string name="about_us">About us</string>
-    <string name="contact_us">Contact us</string>
-    <string name="satellite_broadcast_information">Satellite broadcast information</string>
-    <string name="telegram">Telegram</string>
-    <string name="instagram">Instagram</string>
-    <string name="facebook">Facebook</string>
-    <string name="youtube">YouTube</string>
-    <string name="soundcloud">SoundCloud</string>
-    <string name="twitter">Twitter</string>
-    <string name="follow_us">Follow us</string>
-    <string name="message_us">Message us</string>
-    <string name="via_the_web">Via the web</string>
-    <string name="email_us">Email us</string>
-    <string name="call_us">Call us</string>
-    <string name="pbms_phone_number_msg" tools:ignore="TypographyDashes">+1-703-671-8888</string>
+    <string name="live_stream">پخش زنده</string>
+    <string name="about_us">درباره ما</string>
+    <string name="contact_us">ارتباط با ما</string>
+    <string name="satellite_broadcast_information">اطلاعات پخش ماهواره‌ای</string>
+    <string name="telegram">تلگرام</string>
+    <string name="instagram">اینستاگرام</string>
+    <string name="facebook">فیس‌بوک</string>
+    <string name="youtube">یوتیوب</string>
+    <string name="soundcloud">ساندکلاد</string>
+    <string name="twitter">توییتر</string>
+    <string name="follow_us">ما را دنبال کنید</string>
+    <string name="message_us">پیغام بدهید</string>
+    <string name="via_the_web">از طریق وبسایت</string>
+    <string name="email_us">ایمیل بزنید</string>
+    <string name="call_us">تماس بگیرید</string>
+    <string name="pbms_phone_number_msg" tools:ignore="TypographyDashes">۱-۷۰۳-۶۷۱-۸۸۸۸</string>
     <string name="persianbms">PersianBMS</string>
-    <string name="radio_broadcast_24_hours_msg">Radio broadcast (24 hours)</string>
-    <string name="iran_and_europe">Iran and Europe</string>
+    <string name="radio_broadcast_24_hours_msg">پخش‌های رادیو (۲۴ ساعته)</string>
+    <string name="iran_and_europe">ایران و اروپا</string>
     <string name="iran_and_europe_satellite_info_msg">Satellite: Hotbird 13D – 13° east\nD/L frequency: 11,200 MHz\nD/L polarity: Vertical\nTransponder: 134\nSymbol rate: 27,500\nFEC: 5/6</string>
-    <string name="north_america">North America</string>
+    <string name="north_america">آمریکای شمالی</string>
     <string name="north_america_satellite_info_msg" tools:ignore="TypographyFractions">Satellite Galaxy 19 – 97° west\nD/L frequency: 12,152 MHz\nD/L polarity: Horizontal\nTransponder: 26\nSymbol rate: 20,000\nFEC: 3/4</string>
-    <string name="tv_schedule">TV schedule</string>
-    <string name="noveen_tv">Noveen TV</string>
-    <string name="noveen_tv_schedule_msg">On Andisheh TV\nThu 21:30 Tehran Time\nFri 12:30 Tehran Time\n\nOn ParsTV\nMon 18:30 Tehran Time\nWed 16:30 Tehran Time</string>
-    <string name="ain_bahai_tv">Ain Bahá\'í TV</string>
-    <string name="ain_bahai_tv_schedule_msg">On Andisheh TV\nTue 22:30 Tehran Time\nWed 12:30 Tehran Time\n\nOn ParsTV\nSat 16:30 Tehran Time\nSun 18:30 Tehran Time</string>
-    <string name="pause">Pause</string>
-    <string name="play">Play</string>
+    <string name="tv_schedule">جدول پخش تلویزیون</string>
+    <string name="noveen_tv">تلویزیون نوین‌TV</string>
+    <string name="noveen_tv_schedule_msg">پخش از کانال اندیشه\nپنج‌شنبه ۲۱:۳۰ تهران\nجمعه ۱۲:۳۰ تهران\n\nپخش از کانال پارس\nدوشنبه ۱۸:۳۰ تهران\nچهارشنبه ۱۶:۳۰</string>
+    <string name="ain_bahai_tv">تلویزیون آئین بهائی</string>
+    <string name="ain_bahai_tv_schedule_msg">از تلویزیون اندیشه\nسه‌شنبه ۲۲:۳۰ تهران\nچهارشنبه ۱۲:۳۰ تهران\n\nاز تلویزیون پارس\nشنبه ۱۶:۳۰ تهران\nیک‌شنبه ۱۸:۳۰\n</string>
+    <string name="pause">مکث کنید</string>
+    <string name="play">بازی</string>
 </resources>

@@ -63,7 +63,7 @@ class AboutFragment : Fragment() {
         when (id) {
             ABOUT_US_ROW_ID -> {
                 val aboutPbms = AboutPbmsFragment()
-                val fm = fragmentManager ?: return
+                val fm = parentFragmentManager
                 val tx = fm.beginTransaction()
                 tx.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
                 tx.replace(R.id.fragment_container, aboutPbms)
@@ -71,7 +71,7 @@ class AboutFragment : Fragment() {
             }
             CONTACT_US_ROW_ID -> {
                 val fragment = ContactUsFragment()
-                val fm = fragmentManager ?: return
+                val fm = parentFragmentManager
                 val tx = fm.beginTransaction()
                 tx.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
                 tx.replace(R.id.fragment_container, fragment)
@@ -79,7 +79,7 @@ class AboutFragment : Fragment() {
             }
             SATELLITE_BROADCAST_INFO_ROW_ID -> {
                 val fragment = SatelliteBroadcastInfoFragment()
-                val fm = fragmentManager ?: return
+                val fm = parentFragmentManager
                 val tx = fm.beginTransaction()
                 tx.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
                 tx.replace(R.id.fragment_container, fragment)
