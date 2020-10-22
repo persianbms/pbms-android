@@ -19,6 +19,7 @@ class ContactUsFragment : Fragment() {
         private const val EMAIL_US_ROW_ID = 3L
         private const val CALL_US_ROW_ID = 4L
         private const val TELEGRAM_ROW_ID = 5L
+        private const val WHATSAPP_ROW_ID = 6L
     }
 
     private val rows = ArrayList<RecyclerAdapterItem>()
@@ -31,6 +32,7 @@ class ContactUsFragment : Fragment() {
         rows.add(RecyclerAdapterItem(EMAIL_US_ROW_ID, R.layout.list_item_two_line))
         rows.add(RecyclerAdapterItem(CALL_US_ROW_ID, R.layout.list_item_two_line))
         rows.add(RecyclerAdapterItem(TELEGRAM_ROW_ID, R.layout.list_item_single_line))
+        rows.add(RecyclerAdapterItem(WHATSAPP_ROW_ID, R.layout.list_item_two_line))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -51,18 +53,14 @@ class ContactUsFragment : Fragment() {
                     data = Uri.parse("mailto:")
                     putExtra(Intent.EXTRA_EMAIL, arrayOf("info@persianbms.org"))
                 }
-                if (intent.resolveActivity(ctx.packageManager) != null) {
-                    startActivity(intent)
-                }
+                startActivity(intent)
             }
             CALL_US_ROW_ID -> {
                 val intent = Intent(Intent.ACTION_DIAL).apply {
                     val phoneNumber = "+17036718888"
                     data = Uri.parse("tel:$phoneNumber")
                 }
-                if (intent.resolveActivity(ctx.packageManager) != null) {
-                    startActivity(intent)
-                }
+                startActivity(intent)
             }
             TELEGRAM_ROW_ID -> {
                 try {
@@ -70,6 +68,10 @@ class ContactUsFragment : Fragment() {
                 } catch (ignore: Throwable) {
                     Uri.parse("https://t.me/PersianBMSContact").startViewIntent(ctx)
                 }
+            }
+            WHATSAPP_ROW_ID -> {
+                val uri = Uri.parse("https://wa.me/12405602414")
+                uri.startViewIntent(ctx)
             }
         }
     }
@@ -109,16 +111,25 @@ class ContactUsFragment : Fragment() {
                             h.image.setImageResource(R.drawable.ic_outline_message_24dp)
                             h.primary.setText(R.string.message_us)
                             h.secondary.setText(R.string.via_the_web)
+                            h.divider.visibility = View.VISIBLE
                         }
                         EMAIL_US_ROW_ID -> {
                             h.image.setImageResource(R.drawable.ic_outline_email_24dp)
                             h.primary.setText(R.string.email_us)
                             h.secondary.text = "info@persianbms.org"
+                            h.divider.visibility = View.VISIBLE
                         }
                         CALL_US_ROW_ID -> {
                             h.image.setImageResource(R.drawable.ic_outline_phone_24dp)
                             h.primary.setText(R.string.call_us)
                             h.secondary.setText(R.string.pbms_phone_number_msg)
+                            h.divider.visibility = View.VISIBLE
+                        }
+                        WHATSAPP_ROW_ID -> {
+                            h.image.setImageResource(R.drawable.ic_whatsapp)
+                            h.primary.setText(R.string.whatsapp)
+                            h.secondary.setText(R.string.pbms_whatsapp_number_msg)
+                            h.divider.visibility = View.GONE
                         }
                     }
                 }
@@ -127,7 +138,7 @@ class ContactUsFragment : Fragment() {
                     h.image.visibility = View.VISIBLE
                     h.image.setImageResource(R.drawable.ic_telegram)
                     h.primary.setText(R.string.telegram)
-                    h.divider.visibility = View.GONE
+                    h.divider.visibility = View.VISIBLE
                     h.itemView.setOnClickListener {
                         onRowClicked(item.id)
                     }

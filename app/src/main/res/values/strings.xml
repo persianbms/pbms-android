@@ -19,6 +19,7 @@
     <string name="email_us">ایمیل بزنید</string>
     <string name="call_us">تماس بگیرید</string>
     <string name="pbms_phone_number_msg" tools:ignore="TypographyDashes">۱-۷۰۳-۶۷۱-۸۸۸۸</string>
+    <string name="pbms_whatsapp_number_msg" tools:ignore="TypographyDashes">۱-۲۴۰-۵۶۰-۲۴۱۴</string>
     <string name="persianbms">PersianBMS</string>
     <string name="pause">مکث کنید</string>
     <string name="play">بازی</string>

@@ -22,7 +22,6 @@ class AboutFragment : Fragment() {
         private const val FACEBOOK_ROW_ID = 9L
         private const val YOUTUBE_ROW_ID = 10L
         private const val SOUNDCLOUD_ROW_ID = 11L
-        private const val WHATSAPP_ROW_ID = 12L
 
         fun newInstance(): AboutFragment {
             return AboutFragment()
@@ -45,7 +44,6 @@ class AboutFragment : Fragment() {
         rows.add(RecyclerAdapterItem(FACEBOOK_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(YOUTUBE_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(SOUNDCLOUD_ROW_ID, R.layout.list_item_single_line))
-        rows.add(RecyclerAdapterItem(WHATSAPP_ROW_ID, R.layout.list_item_single_line))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -93,9 +91,6 @@ class AboutFragment : Fragment() {
             }
             SOUNDCLOUD_ROW_ID -> {
                 Uri.parse("https://soundcloud.com/Persianbms").startViewIntent(ctx)
-            }
-            WHATSAPP_ROW_ID -> {
-                Uri.parse("https://wa.me/12405602414").startViewIntent(ctx)
             }
         }
     }
@@ -154,12 +149,6 @@ class AboutFragment : Fragment() {
                             h.primary.setText(R.string.soundcloud)
                             h.image.visibility = View.VISIBLE
                             h.image.setImageResource(R.drawable.ic_soundcloud)
-                            h.divider.visibility = View.VISIBLE
-                        }
-                        WHATSAPP_ROW_ID -> {
-                            h.primary.setText(R.string.whatsapp)
-                            h.image.visibility = View.VISIBLE
-                            h.image.setImageResource(R.drawable.ic_whatsapp)
                             h.divider.visibility = View.GONE
                         }
                         else -> {

@@ -10,5 +10,6 @@ class TwoLineItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
     val image: ImageView = itemView.findViewById(R.id.image)
     val primary: MaterialTextView = itemView.findViewById(R.id.primary)
     val secondary: MaterialTextView = itemView.findViewById(R.id.secondary)
+    val divider: View = itemView.findViewById(R.id.divider)
 
 }
