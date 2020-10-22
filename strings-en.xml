@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">PersianBMS</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
+
+    <string name="live_stream">Live stream</string>
+    <string name="about_us">About us</string>
+    <string name="contact_us">Contact us</string>
+    <string name="telegram">Telegram</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="youtube">YouTube</string>
+    <string name="soundcloud">SoundCloud</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="follow_us">Follow us</string>
+    <string name="message_us">Message us</string>
+    <string name="via_the_web">Via the web</string>
+    <string name="email_us">Email us</string>
+    <string name="call_us">Call us</string>
+    <string name="pbms_phone_number_msg" tools:ignore="TypographyDashes">+1-703-671-8888</string>
+    <string name="persianbms">PersianBMS</string>
+</resources>

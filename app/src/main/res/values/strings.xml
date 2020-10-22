@@ -6,13 +6,13 @@
     <string name="live_stream">پخش زنده</string>
     <string name="about_us">درباره ما</string>
     <string name="contact_us">ارتباط با ما</string>
-    <string name="satellite_broadcast_information">اطلاعات پخش ماهواره‌ای</string>
     <string name="telegram">تلگرام</string>
     <string name="instagram">اینستاگرام</string>
     <string name="facebook">فیس‌بوک</string>
     <string name="youtube">یوتیوب</string>
     <string name="soundcloud">ساندکلاد</string>
     <string name="twitter">توییتر</string>
+    <string name="whatsapp">واتساپ</string>
     <string name="follow_us">ما را دنبال کنید</string>
     <string name="message_us">پیغام بدهید</string>
     <string name="via_the_web">از طریق وبسایت</string>
@@ -20,16 +20,6 @@
     <string name="call_us">تماس بگیرید</string>
     <string name="pbms_phone_number_msg" tools:ignore="TypographyDashes">۱-۷۰۳-۶۷۱-۸۸۸۸</string>
     <string name="persianbms">PersianBMS</string>
-    <string name="radio_broadcast_24_hours_msg">پخش‌های رادیو (۲۴ ساعته)</string>
-    <string name="iran_and_europe">ایران و اروپا</string>
-    <string name="iran_and_europe_satellite_info_msg">Satellite: Hotbird 13D – 13° east\nD/L frequency: 11,200 MHz\nD/L polarity: Vertical\nTransponder: 134\nSymbol rate: 27,500\nFEC: 5/6</string>
-    <string name="north_america">آمریکای شمالی</string>
-    <string name="north_america_satellite_info_msg" tools:ignore="TypographyFractions">Satellite Galaxy 19 – 97° west\nD/L frequency: 12,152 MHz\nD/L polarity: Horizontal\nTransponder: 26\nSymbol rate: 20,000\nFEC: 3/4</string>
-    <string name="tv_schedule">جدول پخش تلویزیون</string>
-    <string name="noveen_tv">تلویزیون نوین‌TV</string>
-    <string name="noveen_tv_schedule_msg">پخش از کانال اندیشه\nپنج‌شنبه ۲۱:۳۰ تهران\nجمعه ۱۲:۳۰ تهران\n\nپخش از کانال پارس\nدوشنبه ۱۸:۳۰ تهران\nچهارشنبه ۱۶:۳۰</string>
-    <string name="ain_bahai_tv">تلویزیون آئین بهائی</string>
-    <string name="ain_bahai_tv_schedule_msg">از تلویزیون اندیشه\nسه‌شنبه ۲۲:۳۰ تهران\nچهارشنبه ۱۲:۳۰ تهران\n\nاز تلویزیون پارس\nشنبه ۱۶:۳۰ تهران\nیک‌شنبه ۱۸:۳۰\n</string>
     <string name="pause">مکث کنید</string>
     <string name="play">بازی</string>
 </resources>

@@ -16,14 +16,13 @@ class AboutFragment : Fragment() {
         private const val ABOUT_US_ROW_ID = 3L
         private const val CONTACT_US_ROW_ID = 4L
         private const val SECTION2_GAP_ROW_ID = 5L
-        private const val SATELLITE_BROADCAST_INFO_ROW_ID = 6L
-        private const val FOLLOW_US_ROW_ID = 7L
-        private const val TELEGRAM_ROW_ID = 8L
-        private const val INSTAGRAM_ROW_ID = 9L
-        private const val FACEBOOK_ROW_ID = 10L
-        private const val YOUTUBE_ROW_ID = 11L
-        private const val SOUNDCLOUD_ROW_ID = 12L
-        private const val TWITTER_ROW_ID = 13L
+        private const val FOLLOW_US_ROW_ID = 6L
+        private const val TELEGRAM_ROW_ID = 7L
+        private const val INSTAGRAM_ROW_ID = 8L
+        private const val FACEBOOK_ROW_ID = 9L
+        private const val YOUTUBE_ROW_ID = 10L
+        private const val SOUNDCLOUD_ROW_ID = 11L
+        private const val WHATSAPP_ROW_ID = 12L
 
         fun newInstance(): AboutFragment {
             return AboutFragment()
@@ -40,14 +39,13 @@ class AboutFragment : Fragment() {
         rows.add(RecyclerAdapterItem(ABOUT_US_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(CONTACT_US_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(SECTION2_GAP_ROW_ID, R.layout.list_item_gap))
-        rows.add(RecyclerAdapterItem(SATELLITE_BROADCAST_INFO_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(FOLLOW_US_ROW_ID, R.layout.list_item_header))
         rows.add(RecyclerAdapterItem(TELEGRAM_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(INSTAGRAM_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(FACEBOOK_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(YOUTUBE_ROW_ID, R.layout.list_item_single_line))
         rows.add(RecyclerAdapterItem(SOUNDCLOUD_ROW_ID, R.layout.list_item_single_line))
-        rows.add(RecyclerAdapterItem(TWITTER_ROW_ID, R.layout.list_item_single_line))
+        rows.add(RecyclerAdapterItem(WHATSAPP_ROW_ID, R.layout.list_item_single_line))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -77,14 +75,6 @@ class AboutFragment : Fragment() {
                 tx.replace(R.id.fragment_container, fragment)
                 tx.addToBackStack(null).commit()
             }
-            SATELLITE_BROADCAST_INFO_ROW_ID -> {
-                val fragment = SatelliteBroadcastInfoFragment()
-                val fm = parentFragmentManager
-                val tx = fm.beginTransaction()
-                tx.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
-                tx.replace(R.id.fragment_container, fragment)
-                tx.addToBackStack(null).commit()
-            }
             TELEGRAM_ROW_ID -> {
                 try {
                     Uri.parse("tg://resolve?domain=Persianbms").startViewIntent(ctx)
@@ -104,8 +94,8 @@ class AboutFragment : Fragment() {
             SOUNDCLOUD_ROW_ID -> {
                 Uri.parse("https://soundcloud.com/Persianbms").startViewIntent(ctx)
             }
-            TWITTER_ROW_ID -> {
-                Uri.parse("https://twitter.com/Persianbms").startViewIntent(ctx)
+            WHATSAPP_ROW_ID -> {
+                Uri.parse("https://wa.me/12405602414").startViewIntent(ctx)
             }
         }
     }
@@ -134,10 +124,6 @@ class AboutFragment : Fragment() {
                         }
                         CONTACT_US_ROW_ID -> {
                             h.primary.setText(R.string.contact_us)
-                            h.divider.visibility = View.GONE
-                        }
-                        SATELLITE_BROADCAST_INFO_ROW_ID -> {
-                            h.primary.setText(R.string.satellite_broadcast_information)
                             h.divider.visibility = View.GONE
                         }
                         TELEGRAM_ROW_ID -> {
@@ -170,10 +156,10 @@ class AboutFragment : Fragment() {
                             h.image.setImageResource(R.drawable.ic_soundcloud)
                             h.divider.visibility = View.VISIBLE
                         }
-                        TWITTER_ROW_ID -> {
-                            h.primary.setText(R.string.twitter)
+                        WHATSAPP_ROW_ID -> {
+                            h.primary.setText(R.string.whatsapp)
                             h.image.visibility = View.VISIBLE
-                            h.image.setImageResource(R.drawable.ic_twitter)
+                            h.image.setImageResource(R.drawable.ic_whatsapp)
                             h.divider.visibility = View.GONE
                         }
                         else -> {
